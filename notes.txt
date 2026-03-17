@@ -19,6 +19,7 @@ If running as a terminal command then the variables have to be specified as such
                PARAMETER presence_penalty 1.5
                PARAMETER temperature 0.7
                PARAMETER top_p 0.8
+  - but no visible improvement
 
 
 
