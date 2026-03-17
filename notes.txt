@@ -4,3 +4,22 @@ If running as a service, then use commands like these to set env params: launchc
 If running as a terminal command then the variables have to be specified as such: OLLAMA_HOST=0.0.0.0:11434 ollama serve 
 
 #2: For Chrome to access local service by machine name, Settings -> Privacy & Security -> Local Network, and enable both Google Chrome and Google Chrome Helper
+
+#3: Fine-tuning qwen3:8b
+  - write changes in a file like: my-qwen3-8b.txt
+  - ollama create my-qwen3-8b -f my-qwen3-8b.txt
+  - ollama run my-qwen3-8b
+  - example my-qwen3-8b.txt:
+               FROM qwen3:8b
+               SYSTEM """You are a highly concise assistant. 
+               Give short, direct answers without unnecessary explanations or filler. 
+               If a one-word or one-sentence answer suffices, use it."""
+
+               PARAMETER num_predict 100
+               PARAMETER presence_penalty 1.5
+               PARAMETER temperature 0.7
+               PARAMETER top_p 0.8
+
+
+
+  
