@@ -5,7 +5,31 @@ If running as a terminal command then the variables have to be specified as such
 
   #b: For Chrome to access local service by machine name, Settings -> Privacy & Security -> Local Network, and enable both Google Chrome and Google Chrome Helper
 
-#2 Fine-tuning qwen3:8b
+#2 VScode + Ollama via Continue.dev
+  - In VScode install extention Continue.dev
+  - For config, config.yaml will open, edit it like this sample -
+name: Local Config
+version: 1.0.0
+schema: v1
+models:
+  - name: qwen2.5-coder:7b
+    provider: ollama
+    model: qwen2.5-coder:7b
+    apiBase: http://localhost:11434
+    roles:
+      - chat
+      - edit
+    capabilities: # Add if not auto-detected
+      - tool_use
+  - name: qwen3.5:4b
+    provider: ollama
+    model: qwen3.5:4b
+    apiBase: http://localhost:11434
+    roles:
+      - autocomplete
+[Ignore all search results that refer to config.json]
+
+#3 Fine-tuning qwen3:8b
   - write changes in a file like: my-qwen3-8b.txt
   - ollama create my-qwen3-8b -f my-qwen3-8b.txt
   - ollama run my-qwen3-8b
