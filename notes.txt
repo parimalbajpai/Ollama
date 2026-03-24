@@ -1,11 +1,11 @@
-Macbook
-#1: It is convenient to run Ollama from terminal instead of running it as a service.
+#1 Macbook
+  #a: It is convenient to run Ollama from terminal instead of running it as a service.
 If running as a service, then use commands like these to set env params: launchctl setenv OLLAMA_HOST "127.0.0.1:9000"
 If running as a terminal command then the variables have to be specified as such: OLLAMA_HOST=0.0.0.0:11434 ollama serve 
 
-#2: For Chrome to access local service by machine name, Settings -> Privacy & Security -> Local Network, and enable both Google Chrome and Google Chrome Helper
+  #b: For Chrome to access local service by machine name, Settings -> Privacy & Security -> Local Network, and enable both Google Chrome and Google Chrome Helper
 
-#3: Fine-tuning qwen3:8b
+#2 Fine-tuning qwen3:8b
   - write changes in a file like: my-qwen3-8b.txt
   - ollama create my-qwen3-8b -f my-qwen3-8b.txt
   - ollama run my-qwen3-8b
