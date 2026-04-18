@@ -46,6 +46,6 @@ models:
                PARAMETER top_p 0.8
   - but no visible improvement
 
-
+#4. All Ollama optimizations for OpenClaw are included in the other repo: https://github.com/parimalbajpai/openclaw/blob/main/notes.txt
 
   
